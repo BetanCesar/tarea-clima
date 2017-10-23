@@ -1,0 +1,19 @@
+<div class="col-xs-12">
+  <button class="btn btn btn-primary" (click)="showForecast()">Obtener Pronostico de {{ nameCity }}</button>
+  <div *ngFor="let city of data.list | slice:0:5">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Temperatura</th>
+        <th>Fecha y hora</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{ city.main.temp }}ºC</td>
+        <td>{{ city.dt_txt }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

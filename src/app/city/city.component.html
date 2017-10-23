@@ -1,0 +1,15 @@
+<div class="col-xs-4 jumbotron" *ngFor="let city of data.list">
+  <h2>
+    {{ city.name }}
+    <button class="btn btn-xs btn-success" (click)="onSelect(city.id, city.name)" (click)="showForecast()">Seleccionar</button>
+  </h2>
+  <h3>{{ city.main.temp }} ºC</h3>
+  <h4 *ngFor="let weather of city.weather">
+    {{ weather.description }}
+  </h4>
+  <h4>Viento: {{ city.wind.speed }} k/h</h4>
+</div>
+<hr>
+<div class="col-xs-12" id="forecast" [hidden]="!isSelected">
+  <app-forecast [(idCity)]="selectedCity" [(nameCity)]="selectedCityName"></app-forecast>
+</div>

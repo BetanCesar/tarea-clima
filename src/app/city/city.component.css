@@ -1,0 +1,11 @@
+#forecast{
+  margin-top: 10px;
+  border-top: 1px solid gray;
+  padding: 10px;
+}
+.jumbotron{
+  border-radius: 170px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+}
